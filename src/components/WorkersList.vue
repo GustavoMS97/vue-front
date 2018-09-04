@@ -1,6 +1,6 @@
 <template>
   <div class="hello" id="hellow">
-    <h2>Adicionar/Editar/Excluir funcionarios</h2>
+    <h2>Adicionar/Editar funcionários</h2>
     <div class="container">
       <div class="resp-table-form">
         <div class="resp-table-body">
@@ -15,7 +15,7 @@
               <span>Data de nascimento: </span>
             </div>
             <div class="inputText">
-              <the-mask required :mask="['####-##-##']" placeholder="YYYY-MM-DD" masked=true v-model="data_nascimento" />
+              <the-mask required :mask="['####-##-##']" placeholder="YYYY-MM-DD" masked v-model="data_nascimento" />
             </div>
           </div>
           <div class="resp-table-row">
@@ -34,7 +34,7 @@
           </div>
           <div class="resp-table-row">
             <div class="label">
-              <span>Matricula: </span>
+              <span>Matrícula: </span>
             </div>
             <div class="inputText">
               <input required placeholder="xxxxxxx" v-model="newmatricula" maxlength="7" />
@@ -72,7 +72,7 @@
           Nome
         </div>
         <div class="table-header-cell">
-          Matricula
+          Matrícula
         </div>
         <div class="table-header-cell">
           Forma de contato
@@ -107,8 +107,11 @@
         </div>
       </div>
     </div>
-    <the-mask :mask="['###.###.###-##']" placeholder="xxx.xxx.xxx-xx" v-model="deleteCpf" />
-    <button class="loginButton" v-on:click="deleteUser">Excluir</button>
+    <h2>Excluir funcionários</h2>
+    <div>
+      <the-mask :mask="['###.###.###-##']" placeholder="xxx.xxx.xxx-xx" v-model="deleteCpf" />
+      <button class="loginButton" v-on:click="deleteUser">Excluir</button>
+    </div>
     <button class="loginButton" v-on:click="logout" style="marginRight: 50px">Logout</button>
   </div>
 </template>

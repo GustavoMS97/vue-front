@@ -14,7 +14,7 @@
         </div>
         <button class="loginButton" type="submit" v-on:click.capture="loginApp">Login</button>
       </div>
-      <p>{{error}}</p>
+      <p style="color: red" >{{error}}</p>
     </div>
   </div>
 </template>

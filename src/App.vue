@@ -2,7 +2,7 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <div v-if="!logged" ><Login msg="Bem vindo ao sistema de funcionários desenvolvido em Vue.js"/></div>  
-    <div v-else ><WorkersList msg="Lista de funcionarios" /></div>
+    <div v-else ><WorkersList msg="Lista de funcionários" /></div>
   </div>
 </template>
 
